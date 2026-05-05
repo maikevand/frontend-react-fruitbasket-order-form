@@ -14,7 +14,7 @@ function App() {
     <AmountCounter emoji="🍏" name="Appels" />
     <AmountCounter emoji="🥝" name="Kiwi's" />
 </ul>
-            {/*reset button die alle counters op 0 zet*/}
+            {/* reset button die alle counters op 0 zet*/}
         </section>
     </>
   )
