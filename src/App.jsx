@@ -2,6 +2,7 @@ import './App.css'
 import React from "react";
 import AmountCounter from "./components/AmountCounter.jsx";
 import Button from "./components/Button.jsx";
+import FormInput from "./components/FormInput.jsx";
 
 function App() {
     const [strawberries, setStrawberries] = React.useState(0);
@@ -75,50 +76,81 @@ function App() {
                     action={resetAll}
                     text="Reset"
                 />
-                {/*<button type="button" onClick={resetAll}>Reset</button>*/}
             </section>
             <form>
-                <label htmlFor="first-name">
-                    Voornaam
-                    <input
-                        type="text"
-                        id="first-name"
-                        name="first-name"
-                        value={firstNameValue}
-                        onChange={(e) => setFirstNameValue(e.target.value)}
-                    />
-                </label>
-                <label htmlFor="last-name">
-                    Achternaam
-                    <input
-                        type="text"
-                        id="last-name"
-                        name="last-name"
-                        value={lastNameValue}
-                        onChange={(e) => setLastNameValue(e.target.value)}
-                    />
-                </label>
-                <label htmlFor="age">
-                    Leeftijd
-                    <input
-                        type="number"
-                        id="age"
-                        name="age"
-                        value={ageValue}
-                        placeholder="0"
-                        onChange={(e) => setAgeValue(e.target.value)}
-                    />
-                </label>
-                <label htmlFor="zip-code">
-                    Postcode
-                    <input
-                        type="text"
-                        id="zip-code"
-                        name="zip-code"
-                        value={zipCodeValue}
-                        onChange={(e) => setZipCodeValue(e.target.value)}
-                    />
-                </label>
+                <FormInput
+                    fieldname="first-name"
+                    text="Voornaam"
+                    type="text"
+                    value={firstNameValue}
+                    setValue={setFirstNameValue}
+                />
+                {/*<label htmlFor="first-name">*/}
+                {/*    Voornaam*/}
+                {/*    <input*/}
+                {/*        type="text"*/}
+                {/*        id="first-name"*/}
+                {/*        name="first-name"*/}
+                {/*        onChange={(e) => setFirstNameValue(e.target.value)}*/}
+                {/*    />*/}
+                {/*</label>*/}
+            <FormInput
+                fieldname="last-name"
+                text="Achternaam"
+                type="text"
+                value={lastNameValue}
+                setValue={setLastNameValue}
+            />
+                {/*<label htmlFor="last-name">*/}
+                {/*    Achternaam*/}
+                {/*    <input*/}
+                {/*        type="text"*/}
+                {/*        id="last-name"*/}
+                {/*        name="last-name"*/}
+                {/*        value={lastNameValue}*/}
+                {/*        onChange={(e) => setLastNameValue(e.target.value)}*/}
+                {/*    />*/}
+                {/*</label>*/}
+
+                <FormInput
+                    fieldname="age"
+                    text="Leeftijd"
+                    type="number"
+                    value={ageValue}
+                    setValue={setAgeValue}
+                />
+
+                {/*<label htmlFor="age">*/}
+                {/*    Leeftijd*/}
+                {/*    <input*/}
+                {/*        type="number"*/}
+                {/*        id="age"*/}
+                {/*        name="age"*/}
+                {/*        value={ageValue}*/}
+                {/*        placeholder="0"*/}
+                {/*        onChange={(e) => setAgeValue(e.target.value)}*/}
+                {/*    />*/}
+                {/*</label>*/}
+
+                {/*{fieldname, text, type, value, setValue}*/}
+
+                <FormInput
+                fieldname="zip-code"
+                text="Postcode"
+                type="text"
+                value={zipCodeValue}
+                setValue={setZipCodeValue}
+                />
+                {/*<label htmlFor="zip-code">*/}
+                {/*    Postcode*/}
+                {/*    <input*/}
+                {/*        type="text"*/}
+                {/*        id="zip-code"*/}
+                {/*        name="zip-code"*/}
+                {/*        value={zipCodeValue}*/}
+                {/*        onChange={(e) => setZipCodeValue(e.target.value)}*/}
+                {/*    />*/}
+                {/*</label>*/}
                 <fieldset>
                     <label htmlFor="delivery-frequency">Bezorgfrequentie</label>
                     <select name="delivery-frequency"
@@ -172,9 +204,6 @@ function App() {
                 action={handleSubmitButtonClick}
                 text="Verzenden"
                 />
-                {/*<button type="button" onClick={handleSubmitButtonClick}>*/}
-                {/*    Verzenden*/}
-                {/*</button>*/}
             </form>
         </>
     )
