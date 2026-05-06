@@ -1,6 +1,7 @@
 import './App.css'
 import React from "react";
 import AmountCounter from "./components/AmountCounter.jsx";
+import Button from "./components/Button.jsx";
 
 function App() {
     const [strawberries, setStrawberries] = React.useState(0);
@@ -70,7 +71,11 @@ function App() {
                         setAmount={setKiwis}
                     />
                 </ul>
-                <button type="button" onClick={resetAll}>Reset</button>
+                <Button
+                    action={resetAll}
+                    text="Reset"
+                />
+                {/*<button type="button" onClick={resetAll}>Reset</button>*/}
             </section>
             <form>
                 <label htmlFor="first-name">
@@ -114,17 +119,17 @@ function App() {
                         onChange={(e) => setZipCodeValue(e.target.value)}
                     />
                 </label>
-                <label htmlFor="delivery-frequency">Bezorgfrequentie</label>
-                <select name="delivery-frequency"
-                        id="delivery-frequency"
-                        value={deliveryFrequencyValue}
-                        onChange={(e) => setDeliveryFrequencyValue(e.target.value)}
-                >
-                    <option value="every-week">Iedere week</option>
-                    <option value="every-other-week">Om de week</option>
-                    <option value="every-month">Iedere maand</option>
-                </select>
                 <fieldset>
+                    <label htmlFor="delivery-frequency">Bezorgfrequentie</label>
+                    <select name="delivery-frequency"
+                            id="delivery-frequency"
+                            value={deliveryFrequencyValue}
+                            onChange={(e) => setDeliveryFrequencyValue(e.target.value)}
+                    >
+                        <option value="every-week">Iedere week</option>
+                        <option value="every-other-week">Om de week</option>
+                        <option value="every-month">Iedere maand</option>
+                    </select>
                     <input
                         type="radio"
                         id="day-delivery"
@@ -163,9 +168,13 @@ function App() {
                     />
                     Ik ga akkoord met de voorwaarden
                 </label>
-                <button type="button" onClick={handleSubmitButtonClick}>
-                    Verzenden
-                </button>
+                <Button
+                action={handleSubmitButtonClick}
+                text="Verzenden"
+                />
+                {/*<button type="button" onClick={handleSubmitButtonClick}>*/}
+                {/*    Verzenden*/}
+                {/*</button>*/}
             </form>
         </>
     )
