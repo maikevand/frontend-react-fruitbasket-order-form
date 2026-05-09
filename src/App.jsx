@@ -112,16 +112,16 @@ function App() {
                     />
                     <fieldset>
                         <div className="form-field">
-                        <label htmlFor="delivery-frequency">Bezorgfrequentie</label>
-                        <select name="delivery-frequency"
-                                id="delivery-frequency"
-                                value={deliveryFrequencyValue}
-                                onChange={(e) => setDeliveryFrequencyValue(e.target.value)}
-                        >
-                            <option value="every-week">Iedere week</option>
-                            <option value="every-other-week">Om de week</option>
-                            <option value="every-month">Iedere maand</option>
-                        </select>
+                            <label htmlFor="delivery-frequency">Bezorgfrequentie</label>
+                            <select name="delivery-frequency"
+                                    id="delivery-frequency"
+                                    value={deliveryFrequencyValue}
+                                    onChange={(e) => setDeliveryFrequencyValue(e.target.value)}
+                            >
+                                <option value="every-week">Iedere week</option>
+                                <option value="every-other-week">Om de week</option>
+                                <option value="every-month">Iedere maand</option>
+                            </select>
                         </div>
                         <input
                             type="radio"
@@ -153,11 +153,11 @@ function App() {
                 </textarea>
                     <label htmlFor="form-terms-and-conditions">
                         <input className="checkbox"
-                            type="checkbox"
-                            id="form-terms-and-conditions"
-                            name="terms-and-conditions"
-                            checked={termsAndConditionsValue}
-                            onChange={(e) => setTermsAndConditionsValue(e.target.checked)}
+                               type="checkbox"
+                               id="form-terms-and-conditions"
+                               name="terms-and-conditions"
+                               checked={termsAndConditionsValue}
+                               onChange={(e) => setTermsAndConditionsValue(e.target.checked)}
                         />
                         Ik ga akkoord met de voorwaarden
                     </label>

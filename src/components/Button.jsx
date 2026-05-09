@@ -1,6 +1,3 @@
-import "./Button.css"
-import React from "react";
-
 function Button({action, text, className}) {
     return (
         <button

@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
 
 /*Table of Contents*/
-    /*1. Global Styles*/
-    /*2. Typography*/
-    /*3. Layout*/
-    /*    3.1 Reusables*/
-    /*    3.2 Other*/
-    /*4. Areas*/
-    /*    4.1 Header*/
-    /*    4.2 Fruits-list*/
-    /*    4.3 Form*/
-    /*5. Media Queries*/
+/*1. Global Styles*/
+/*2. Typography*/
+/*3. Layout*/
+/*    3.1 Reusables*/
+/*    3.2 Other*/
+/*4. Areas*/
+/*    4.1 Header*/
+/*    4.2 Fruits-list*/
+/*    4.3 Form*/
+/*5. Media Queries*/
 
 /* ------------------------------- 1. Global Styles -------------------------------- */
 * {
@@ -50,11 +50,14 @@ h1 {
 header h1 {
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: flex-end;
+    max-width: 400px;
+    margin: 0 auto;
     border: 2px solid darkgreen;
     border-radius: 5px;
     padding: 5px;
 }
+
 /* --------------- 4.2 Fruits-list ------------------- */
 .fruits-list {
     display: flex;
@@ -76,6 +79,7 @@ main {
     flex-direction: column;
     gap: 24px;
 }
+
 /* --------------- 4.3 Form ------------------- */
 form {
     display: flex;
@@ -83,6 +87,8 @@ form {
     align-items: flex-start;
     font-size: 15px;
     gap: 12px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .form-field {
@@ -103,4 +109,5 @@ fieldset label {
 .checkbox {
     margin-right: 5px;
 }
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
